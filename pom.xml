@@ -4,7 +4,7 @@
   <parent>
     <groupId>org.jenkins-ci.plugins</groupId>
     <artifactId>plugin</artifactId>
-    <version>4.1</version>
+    <version>4.51</version>
     <relativePath />
   </parent>
   <groupId>io.jenkins.plugins</groupId>
@@ -13,8 +13,7 @@
   <packaging>hpi</packaging>
   <properties>
     <changelist>9999-SNAPSHOT</changelist>
-    <jenkins.version>2.176.4</jenkins.version>
-    <java.level>8</java.level>
+    <jenkins.version>2.346.3</jenkins.version>
     <jersey.version>2.33</jersey.version>
   </properties>
   <name>DAGsHub Branch Source Plugin</name>
