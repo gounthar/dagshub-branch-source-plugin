@@ -4,7 +4,7 @@
   <parent>
     <groupId>org.jenkins-ci.plugins</groupId>
     <artifactId>plugin</artifactId>
-    <version>4.1</version>
+    <version>4.51</version>
     <relativePath />
   </parent>
   <groupId>io.jenkins.plugins</groupId>
@@ -13,8 +13,9 @@
   <packaging>hpi</packaging>
   <properties>
     <changelist>9999-SNAPSHOT</changelist>
-    <jenkins.version>2.176.4</jenkins.version>
-    <java.level>8</java.level>
+    <!-- https://www.jenkins.io/doc/developer/plugin-development/choosing-jenkins-baseline/ -->
+    <jenkins.baseline>2.346</jenkins.baseline>
+    <jenkins.version>${jenkins.baseline}.3</jenkins.version>
     <jersey.version>2.33</jersey.version>
   </properties>
   <name>DAGsHub Branch Source Plugin</name>
@@ -65,25 +66,18 @@
     <dependencies>
       <dependency>
         <groupId>io.jenkins.tools.bom</groupId>
-        <artifactId>bom-2.176.x</artifactId>
-        <version>9</version>
+        <artifactId>bom-${jenkins.baseline}.x</artifactId>
+        <version>1763.v092b_8980a_f5e</version>
         <scope>import</scope>
         <type>pom</type>
       </dependency>
     </dependencies>
   </dependencyManagement>
 
-  <developers>
-    <developer>
-      <id>guysmoilov</id>
-      <name>Guy Smoilovsky</name>
-    </developer>
-  </developers>
-
   <url>https://github.com/jenkinsci/dagshub-branch-source-plugin</url>
 
   <scm>
-    <connection>scm:git:git://github.com/jenkinsci/${project.artifactId}-plugin.git</connection>
+    <connection>scm:git:https://github.com/jenkinsci/${project.artifactId}-plugin.git</connection>
     <developerConnection>scm:git:git@github.com:jenkinsci/${project.artifactId}-plugin.git
     </developerConnection>
     <url>https://github.com/jenkinsci/${project.artifactId}-plugin</url>
